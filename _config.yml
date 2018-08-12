@@ -1,2 +1,3 @@
 name: rebooter
 markdown: kramdown
+permalink: /blog/:title/
