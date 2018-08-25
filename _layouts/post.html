@@ -11,19 +11,19 @@ layout: default
 <div>
     <form method="post" action="https://api.staticman.net/v2/entry/rebooter/rebooter.github.io/master/comments">
         <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-        <label for="name">Name</label>
-        <input id="name" name="fields[name]" type="text" placeholder="Имячко...">
-        <label for="email">Email</label>
-        <input id="email" name="fields[email]" type="email" placeholder="Мылочко...">
-        <label for="message">Message</label>
-        <textarea id="message" name="fields[message]" placeholder="Текстище..."></textarea>
+        <label for="name">Имя</label>
+        <input id="name" name="fields[name]" type="text" placeholder="Иванов Иван">
+        <label for="email">Мыло</label>
+        <input id="email" name="fields[email]" type="email" placeholder="ivanov@example.com">
+        <label for="message">Комментарий</label>
+        <textarea id="message" name="fields[message]" placeholder="Текст..."></textarea>
 
         <input type="submit">
     </form>
 </div>
 
 <div>
-    <h2>Comments</h2>
+    <h1>Комментарии</h1>
     {% assign comments = site.data.comments[page.slug] %}
     {% if comments != null %}
     {% assign comments = site.data.comments[page.slug] | sort %}
