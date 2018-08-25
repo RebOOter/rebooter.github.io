@@ -1,3 +1,4 @@
 name: rebooter
 markdown: kramdown
 permalink: /blog/:title/
+baseurl: rebooter.github.io
