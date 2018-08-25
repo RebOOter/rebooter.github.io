@@ -7,3 +7,30 @@ layout: default
 <div class="post">
     {{ content }}
 </div>
+
+<div>
+    <form method="post" action="https://api.staticman.net/v2/entry/rebooter/rebooter.github.io/master">
+        <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+        <label for="name">Name</label>
+        <input id="name" name="fields[name]" type="text" placeholder="Имячко...">
+        <label for="email">Email</label>
+        <input id="email" name="fields[email]" type="email" placeholder="Мылочко...">
+        <label for="message">Message</label>
+        <textarea id="message" name="fields[message]" placeholder="Текстище..."></textarea>
+
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <h2>Comments</h2>
+    {% assign comments = site.data.comments[page.slug] %}
+    {% if comments != null %}
+    {% assign comments = site.data.comments[page.slug] | sort %}
+    {% for comment in comments %}
+    {% assign name = comment[1].name %}
+    {% assign message = comment[1].message %}
+    {% include comment.html name = name message = message %}
+    {% endfor %}
+    {% endif %}
+</div>
