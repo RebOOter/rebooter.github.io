@@ -1,11 +1,14 @@
 ---
 layout: default
-title: Blog
+title: Посты
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> ->
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+{% for post in site.posts %}
+<a href="{{post.url}}" title="{{post.title}}">
+<div class="posts-list">
+    <div class="header-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('{{site.baseurl}}/assets/{{post.slug}}.png');"></div>
+    <h1 class="header-post">{{post.title}}</h1>
+    <p class="desc-post">{{post.description}}</p>
+</div>
+</a>
+{% endfor %}

@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<div>
+    <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('{{site.baseurl}}/assets/{{page.slug}}.png');"
+         class="header-image">
+        <h1 class="header-post">{{ page.title }}</h1>
+    </div>
+</div>
 <p class="meta">{{ page.data | date_to_long_string }}</p>
 
 <div class="post">
