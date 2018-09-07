@@ -36,13 +36,22 @@ layout: default
 
 <div>
     <h1>Комментарии</h1>
+    <!--One of the worst things I've ever written-->
     {% assign comments = site.data.comments[page.slug] %}
+    {% if page.slug == "selenium-!=-framework" %}
+        {% assign comments = site.data.comments['selenium--framework'] %}
+    {% endif %}
     {% if comments != null %}
-    {% assign comments = site.data.comments[page.slug] | sort %}
-    {% for comment in comments %}
-    {% assign name = comment[1].name %}
-    {% assign message = comment[1].message %}
-    {% include comment.html name = name message = message %}
-    {% endfor %}
+        {% if page.slug == "selenium-!=-framework" %}
+            {% assign comments = site.data.comments['selenium--framework'] | sort %}
+        {% else %}
+            {% assign comments = site.data.comments[page.slug] | sort %}
+        {% endif %}
+        {% for comment in comments %}
+            {% assign name = comment[1].name %}
+            {% assign message = comment[1].message %}
+            {% assign date = comment[1].date %}
+            {% include comment.html name = name message = message date = date %}
+        {% endfor %}
     {% endif %}
 </div>
