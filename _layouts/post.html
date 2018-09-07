@@ -21,7 +21,7 @@ layout: default
     {% if jekyll.environment == "development" %}
     <form method="post" action="">
     {% endif %}
-        <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}">
+        <input name="options[redirect]" type="hidden" value="{{site.url}}{{ page.url }}">
         <input name="options[slug]" type="hidden" value="{{ page.slug }}">
         <label for="name">Имя</label>
         <input id="name" name="fields[name]" type="text" placeholder="Иванов Иван">
