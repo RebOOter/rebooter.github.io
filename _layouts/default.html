@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% include analytics.html %}
+    {% if jekyll.environment == "production" %}
+        {% include analytics.html %}
+    {% endif %}
     <title>{{ page.title }}</title>
     <!-- link to main stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/main.css">

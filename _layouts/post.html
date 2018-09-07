@@ -15,7 +15,13 @@ layout: default
 </div>
 
 <div>
+    {% if jekyll.environment == "production" %}
     <form method="post" action="https://api.staticman.net/v2/entry/rebooter/rebooter.github.io/master/comments">
+    {% endif %}
+    {% if jekyll.environment == "development" %}
+    <form method="post" action="">
+    {% endif %}
+        <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}">
         <input name="options[slug]" type="hidden" value="{{ page.slug }}">
         <label for="name">Имя</label>
         <input id="name" name="fields[name]" type="text" placeholder="Иванов Иван">
