@@ -146,10 +146,24 @@ form {
 }
 
 .comment > p {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
-.comment > span {
+.comment span {
+    display: block;
+    position: relative;
+    padding-left: 110px;
     font-weight: bold;
     font-size: 1.5em;
+}
+
+.comment-avatar {
+    position: absolute;
+    width: 100px;
+}
+
+.comment_date {
+    display: block;
+    position: relative;
+    padding-left: 110px;
 }

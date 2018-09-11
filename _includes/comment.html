@@ -1,4 +1,8 @@
 <div class="comment">
-    <span>{{ include.name }}</span>
+    <div>
+        <div><img class="comment-avatar" src="{{site.baseurl}}/assets/avatar.png"></div>
+        <span>Пишет {{ include.name }}</span>
+        <p class="comment_date"><em>{{ include.date | date: "%d %b %Y, %H:%M:%S" }}</em></p>
+    </div>
     <p>{{ include.message | markdownify }}</p>
 </div>
