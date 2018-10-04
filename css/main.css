@@ -167,6 +167,7 @@ form {
 
 .comment > p {
     font-size: 1.5em;
+    white-space: pre-line;
 }
 
 .comment span {
