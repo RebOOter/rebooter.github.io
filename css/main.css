@@ -33,6 +33,11 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
+h2 {
+    font-size: 1.7em;
+}
+
 .posts-list{
     position: relative;
     text-align: center;
