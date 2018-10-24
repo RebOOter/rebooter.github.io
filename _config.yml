@@ -4,4 +4,4 @@ permalink: /blog/:title/
 repository: rebooter/rebooter.github.io
 plugins:
   - jekyll-feed
-baseurl: https://rebooter.github.io
+#baseurl: https://rebooter.github.io
