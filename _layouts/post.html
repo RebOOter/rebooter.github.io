@@ -14,6 +14,8 @@ layout: default
     {{ content }}
 </div>
 
+{% include subscribe.html %}
+
 <div>
     {% if jekyll.environment == "production" %}
     <form method="post" action="https://api.staticman.net/v2/entry/rebooter/rebooter.github.io/master/comments">
