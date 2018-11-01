@@ -2,7 +2,9 @@
 layout: default
 title: Посты
 ---
-{% for post in site.posts %}
+{% for category in site.categories %}
+{% if category[0] == "blog" %}
+{% for post in category[1] %}
 <a href="{{post.url}}" title="{{post.title}}">
 <div class="posts-list">
     <div class="header-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -11,4 +13,6 @@ title: Посты
     <p class="desc-post">{{post.description}}</p>
 </div>
 </a>
+{% endfor %}
+{% endif %}
 {% endfor %}

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Selenium != framework"
+categories: [blog]
 date: 2018-09-07
 description: "Немного о том, почему я не люблю, когда Selenium называют фреймворком с обоснованием и жаром."
 ---

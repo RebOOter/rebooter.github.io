@@ -1,6 +1,6 @@
 name: rebooter
 markdown: kramdown
-permalink: /blog/:title/
+permalink: /:categories/:title/
 repository: rebooter/rebooter.github.io
 plugins:
   - jekyll-feed
